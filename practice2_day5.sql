@@ -20,3 +20,10 @@ GROUP BY candidate_id
 having count (DISTINCT skill) = 3
 ORDER BY candidate_id 
 --EX6
+SELECT user_id, 
+EXTRACT(day FROM MAX(post_date)- min(post_date))  AS days_between
+FROM posts
+WHERE post_date BETWEEN '01/01/2021' AND '12/31/2021'
+GROUP BY user_id
+having COUNT(DISTINCT post_id)>=2
+--EX7
