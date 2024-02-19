@@ -60,3 +60,7 @@ from Followers
 group by  user_id
 order by user_id\
 --EX12
+select class
+from Courses 
+group by class
+having Count(student)>=5
