@@ -43,7 +43,13 @@ GROUP BY sender_id
 ORDER BY COUNT(sender_id) DESC
 LIMIT 2
 --Ex7
-
+SELECT activity_date AS day, 
+COUNT(DISTINCT user_id) AS active_users
+FROM Activity
+WHERE activity_date >='2019-06-27' and activity_date <='2019-07-27'
+GROUP BY activity_date
+ORDER BY day
+--Ex8
 
 
 
