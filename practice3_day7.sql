@@ -50,9 +50,16 @@ WHERE activity_date >='2019-06-27' and activity_date <='2019-07-27'
 GROUP BY activity_date
 ORDER BY day
 --Ex8
-
-
-
+select 
+count(id) as number_employees
+from employees
+where (extract(month from joining_date) between '1' and '7') and extract(year from joining_date) = '2022'
+--Ex9
+select 
+Position('a' in first_name) as number
+from worker
+where first_name = 'Amitah'
+--Ex10
 
 
 
