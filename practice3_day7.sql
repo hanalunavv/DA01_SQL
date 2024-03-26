@@ -60,7 +60,11 @@ Position('a' in first_name) as number
 from worker
 where first_name = 'Amitah'
 --Ex10
-
+select 
+substring(title,length(winery)+2,4) as year,
+concat(winery,' ',substring(title,length(winery)+2,4)) as Wine_name
+from winemag_p2
+where  country = 'Macedonia'
 
 
 
